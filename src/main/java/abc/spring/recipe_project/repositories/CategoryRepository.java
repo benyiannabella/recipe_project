@@ -1,6 +1,7 @@
 package abc.spring.recipe_project.repositories;
 
 import abc.spring.recipe_project.domain.Category;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
