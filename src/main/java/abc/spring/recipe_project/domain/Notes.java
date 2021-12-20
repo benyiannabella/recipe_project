@@ -13,7 +13,7 @@ public class Notes {
     private Recipe recipe;
 
     @Lob
-    private String recipeNoted;
+    private String recipeNotes;
 
     public Long getId() {
         return id;
@@ -31,11 +31,11 @@ public class Notes {
         this.recipe = recipe;
     }
 
-    public String getRecipeNoted() {
-        return recipeNoted;
+    public String getRecipeNotes() {
+        return recipeNotes;
     }
 
-    public void setRecipeNoted(String recipeNoted) {
-        this.recipeNoted = recipeNoted;
+    public void setRecipeNotes(String recipeNotes) {
+        this.recipeNotes = recipeNotes;
     }
 }

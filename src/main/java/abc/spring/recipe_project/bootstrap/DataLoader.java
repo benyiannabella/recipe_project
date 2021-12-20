@@ -4,7 +4,6 @@ import abc.spring.recipe_project.domain.*;
 import abc.spring.recipe_project.repositories.CategoryRepository;
 import abc.spring.recipe_project.repositories.RecipeRepository;
 import abc.spring.recipe_project.repositories.UnitOfMeasureRepository;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -118,19 +117,18 @@ public class DataLoader implements ApplicationListener<ContextRefreshedEvent> {
                 "Note: Chilling tomatoes hurts their flavor. So, if you want to add chopped tomato to your guacamole, add it just before serving");
 
         Notes guacamoleNotes = new Notes();
-        guacamoleNotes.setRecipeNoted("Be careful handling chilis! If using, it's best to wear food-safe gloves. If no gloves are available, wash your hands thoroughly after handling, and do not touch your eyes or the area near your eyes for several hours afterwards.");
+        guacamoleNotes.setRecipeNotes("Be careful handling chilis! If using, it's best to wear food-safe gloves. If no gloves are available, wash your hands thoroughly after handling, and do not touch your eyes or the area near your eyes for several hours afterwards.");
 
-        guacamoleNotes.setRecipe(guacamole);
         guacamole.setNotes(guacamoleNotes);
 
-        guacamole.getIngredients().add(new Ingredient("ripe avocado", new BigDecimal(2), eachUom, guacamole));
-        guacamole.getIngredients().add(new Ingredient("salt", new BigDecimal(5), teaSpoonUom, guacamole));
-        guacamole.getIngredients().add(new Ingredient("fresh lime juice", new BigDecimal(2), tableSpoonUom, guacamole));
-        guacamole.getIngredients().add(new Ingredient("minced red onion", new BigDecimal(2), tableSpoonUom, guacamole));
-        guacamole.getIngredients().add(new Ingredient("serrano chiles", new BigDecimal(2), eachUom, guacamole));
-        guacamole.getIngredients().add(new Ingredient("black pepper", new BigDecimal(2), dashUom, guacamole));
-        guacamole.getIngredients().add(new Ingredient("cilantro", new BigDecimal(2), tableSpoonUom, guacamole));
-        guacamole.getIngredients().add(new Ingredient("ripe tomato", new BigDecimal(".5"), eachUom, guacamole));
+        guacamole.getIngredients().add(new Ingredient("ripe avocado", new BigDecimal(2), eachUom));
+        guacamole.getIngredients().add(new Ingredient("salt", new BigDecimal(5), teaSpoonUom));
+        guacamole.getIngredients().add(new Ingredient("fresh lime juice", new BigDecimal(2), tableSpoonUom));
+        guacamole.getIngredients().add(new Ingredient("minced red onion", new BigDecimal(2), tableSpoonUom));
+        guacamole.getIngredients().add(new Ingredient("serrano chiles", new BigDecimal(2), eachUom));
+        guacamole.getIngredients().add(new Ingredient("black pepper", new BigDecimal(2), dashUom));
+        guacamole.getIngredients().add(new Ingredient("cilantro", new BigDecimal(2), tableSpoonUom));
+        guacamole.getIngredients().add(new Ingredient("ripe tomato", new BigDecimal(".5"), eachUom));
 
         recipes.add(guacamole);
 
