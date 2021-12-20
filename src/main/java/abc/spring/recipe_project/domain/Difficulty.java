@@ -5,5 +5,5 @@ import javax.persistence.Enumerated;
 
 public enum Difficulty {
 
-    EASy, MEDIUM, HARD
+    EASY, MEDIUM, HARD
 }
